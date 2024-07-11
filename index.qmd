@@ -76,7 +76,7 @@ head(mtcars$mpg) # toon de eerste 6 elementen van de variabele genaamd 'mpg' uit
 
 ### Navigeren {-}
 
-Aan de linkerkant vind je een inhoudstafel van het volledige leerpad. Je kan een onderdeel laden door op de titel te klikken.
+Aan de linkerkant vind je een inhoudstafel van het volledige leerpad. Je kan een onderdeel bekijken door op de titel te klikken.
 
 Het zoekveld net boven de inhoudstafel kan je gebruiken om snel terug te vinden waar een bepaald onderwerp wordt besproken.
 
