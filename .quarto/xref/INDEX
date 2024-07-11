@@ -1,0 +1,32 @@
+{
+  "index.qmd": {
+    "index.html": "d41365fa"
+  },
+  "02-Wat-is-R.qmd": {
+    "02-Wat-is-R.html": "cbb3082b"
+  },
+  "03-R-en-RStudio-installeren.qmd": {
+    "03-R-en-RStudio-installeren.html": "5746ec29"
+  },
+  "04-Instructies-geven-in-R.qmd": {
+    "04-Instructies-geven-in-R.html": "38285ab9"
+  },
+  "05-Data-in-R.qmd": {
+    "05-Data-in-R.html": "435007fb"
+  },
+  "06-Eerste-berekeningen-in-R.qmd": {
+    "06-Eerste-berekeningen-in-R.html": "3e68dd43"
+  },
+  "07-Eenvoudige-functies.qmd": {
+    "07-Eenvoudige-functies.html": "51d1e6c4"
+  },
+  "08-Je-werk-opslaan.qmd": {
+    "08-Je-werk-opslaan.html": "0f2c9b24"
+  },
+  "09-Data-importeren.qmd": {
+    "09-Data-importeren.html": "e4f2a17e"
+  },
+  "10-Meer-functies-via-packages.qmd": {
+    "10-Meer-functies-via-packages.html": "6fc60baf"
+  }
+}

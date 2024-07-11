@@ -1,0 +1,207 @@
+# Data importeren
+
+Moet het nog herhaald worden? Je zal in R heel vaak met data werken. Dat wist je natuurlijk al. Maar hoe kan je die data in RStudio inladen, zodat je ermee aan de slag kan? 
+
+Data zullen vaak opgeslagen zijn in een csv-bestand. Dat is een specifiek bestandstype dat heel geschikt is om onderzoeksdata te bevatten. In R bestaat een handige functie om zo'n csv-bestand in te laden: `read.csv()`. Met deze functie kan je data inladen...
+
+<ol>
+<li> ...vanop een locatie op je computer (ook "lokaal" genoemd)
+
+<li> ...vanop een locatie op het internet
+</ol>
+
+\
+
+Laten we een voorbeeld van elk geval bekijken. Het is lichtjes verschillend voor Windows en Mac OS, dus kies in het overzicht links voor de juiste pagina of klik door via het pijltje rechts tot je op de juiste pagina landt.
+\
+
+
+## Windows
+
+### Lokale data inladen
+
+In deze situatie heb je een csv-bestand ergens op je computer opgeslagen. In een ideale wereld bevindt dit bestand zich in je working directory.
+
+Ter herinnering, de working directory is een locatie op je computer die in verbinding staat met RStudio. Om te achterhalen wat op dit moment je working directory is gebruik je de functie `getwd()`.
+
+```{r, eval=FALSE}
+getwd()
+```
+
+```{r, echo=FALSE}
+print("C:/Gebruikers/michi/Documenten/Statistiek/Werken met R")
+```
+
+\
+
+Als zich in die map een csv-bestand bevindt, dan kan je het oproepen door simpelweg de naam van het bestand als argument te geven aan de functie `read.csv()`. Het is vaak een goed idee om dit bestand bij het inlezen meteen in een nieuw object te stoppen, hier `basketbal_dataframe` genaamd.
+
+```{r}
+basketbal_dataframe <- read.csv("basketbal.csv")
+```
+
+\
+
+Inspecteer de eerste 6 rijen van het object dat je net hebt gemaakt.
+
+```{r}
+head(basketbal_dataframe)
+```
+
+\
+
+Als het bestand dat je wil inlezen zich niet in je working directory bevindt, maar ergens anders op je computer, dan moet je de locatie^[Zorg ervoor dat je enkel / gebruikt in de maplocatie, geen \\.] meegeven als argument aan de functie `read.csv()`. Bijvoorbeeld:
+
+```{r}
+deelnemers_dataframe <- read.csv("C:/Users/mbeelaer/Documents/UGent/biostats.csv")
+```
+
+\
+
+Bekijk opnieuw de eerste 6 rijen ter controle.
+
+```{r}
+head(deelnemers_dataframe) 
+```
+
+\
+
+Dit werkt ook prima, maar het is wat omslachtiger, omdat je eerst de locatie van het bestand moet achterhalen en vervolgens tussen de haakjes van de functie `read.csv()` plakken.
+
+\
+
+
+### Data van het internet inladen
+
+Iemand heeft een csv-bestand gemaakt over de films waarin Robert De Niro meespeelt en heeft die data ter beschikking gesteld op het internet. Het bestand is te vinden op het volgende internetadres (ook "url" genoemd):
+
+<span class="filepath">https://people.sc.fsu.edu/~jburkardt/data/csv/deniro.csv</span> 
+
+\
+
+De data in dit bestand kan je rechtstreeks in RStudio inladen. Dit doe je door de url als argument aan de functie `read.csv()` te geven:
+
+```{r}
+film_data <- read.csv("https://people.sc.fsu.edu/~jburkardt/data/csv/deniro.csv") 
+```
+
+\
+
+Om de data te inspecteren kan je de functies `head()` en `str()` gebruiken.
+
+```{r}
+head(film_data)
+
+str(film_data)
+```
+
+\
+
+De data lijken goed ingeladen! Kan je achterhalen hoeveel films in de dataset zijn opgenomen?
+
+<details>
+<summary><span class="details-summary">Klik hier om het antwoord te zien</span></summary>
+<div class="meerInfo">
+Er zijn 87 "observations" van 3 variabelen in het dataframe. Dat wil zeggen dat jaartal, score en titel van 87 films werden bijgehouden.
+</div>
+</details>
+
+\
+
+
+## macOS
+
+### Lokale data inladen
+
+In deze situatie heb je een csv-bestand ergens op je computer opgeslagen. In het eenvoudigste geval bevindt dit bestand zich in je working directory.
+
+Ter herinnering, de working directory is een locatie op je computer die in verbinding staat met RStudio. Om te achterhalen wat op dit moment je working directory is gebruik je de functie `getwd()`.
+
+```{r, eval=FALSE}
+getwd()
+```
+
+```{r, echo=FALSE}
+print("/Users/jouwnaam/Statistiek")
+```
+
+\
+
+Als zich in die map een csv-bestand bevindt, dan kan je het oproepen door simpelweg de naam van het bestand als argument te geven aan de functie `read.csv()`. Het is vaak een goed idee om dit bestand bij het inlezen meteen in een nieuw object te stoppen, hier `basketbal_dataframe` genaamd.
+
+```{r}
+basketbal_dataframe <- read.csv("basketbal.csv")
+```
+
+\
+
+Inspecteer de eerste 6 rijen van het dataframe met de functie `head()`.
+
+```{r}
+head(basketbal_dataframe)
+```
+
+\
+
+Als het bestand dat je wil inlezen zich niet in je working directory bevindt, dan moet je de locatie^[Zorg ervoor dat je enkel / gebruikt in de maplocatie, geen \\.] meegeven als argument aan de functie `read.csv()`. Bijvoorbeeld:
+
+```{r, eval=FALSE}
+deelnemers_dataframe <- read.csv("/Users/jouwnaam/Documents/biostats.csv")
+```
+
+```{r, echo=FALSE}
+deelnemers_dataframe <- read.csv("C:/Users/mbeelaer/Documents/UGent/biostats.csv")
+```
+
+\
+
+Bekijk opnieuw de eerste 6 rijen ter controle.
+
+```{r}
+head(deelnemers_dataframe)
+```
+
+\
+
+Dit werkt ook prima, maar het is wat omslachtiger, omdat je eerst de locatie van het bestand moet achterhalen en vervolgens tussen de haakjes van de functie `read.csv()` plakken.
+
+\
+
+
+### Data van het internet inladen
+
+Iemand heeft een csv-bestand gemaakt over de films waarin Robert De Niro meespeelt en heeft die data ter beschikking gesteld op het internet. Het bestand is te vinden op het volgende internetadres (ook "url" genoemd):
+
+<span class="filepath">https://people.sc.fsu.edu/~jburkardt/data/csv/deniro.csv</span>
+
+\
+
+Deze data kan je rechtstreeks in RStudio inladen. Dit doe je door de url als argument aan de functie `read.csv()` te geven. Het is best om dit bestand meteen in een object te stoppen, hier `film_data` genoemd:
+
+```{r}
+film_data <- read.csv("https://people.sc.fsu.edu/~jburkardt/data/csv/deniro.csv") 
+
+```
+
+\
+
+Om de data te inspecteren kan je de functies `head()` en `str()` gebruiken.
+
+```{r}
+head(film_data)
+
+str(film_data)
+```
+
+\
+
+De data lijken goed ingeladen! Kan je achterhalen hoeveel films in de dataset zijn opgenomen?
+
+<details>
+<summary><span class="details-summary">Klik hier om het antwoord te zien</span></summary>
+<div class="meerInfo">
+Er zijn 87 "observations" van 3 variabelen in het dataframe. Dat wil zeggen dat jaartal, score en titel van 87 films werden bijgehouden.
+</div>
+</details>
+
+\

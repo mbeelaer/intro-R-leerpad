@@ -1,0 +1,190 @@
+# Eenvoudige functies
+
+Je weet al hoe je allerlei berekeningen kan uitvoeren, zowel met getallen als met vectoren. Daarmee kan je heel veel gedaan krijgen, maar sommige berekeningen zouden wel eens heel omslachtig kunnen zijn. Gelukkig bestaan er ook functies. Dat zijn hulpmiddelen die je leven (in R) veel makkelijker maken.
+
+\
+
+## Functies voor vectoren
+
+In het kader van een onderzoek heb je 10 mensen bevraagd en gegevens verzameld over hun persoonlijke maandelijkse inkomen (in euro). Je stopt die gegevens in een vector `inkomen`.
+
+
+```{r}
+inkomen <- c(1850, 1722, 2319, 4480, 1398, 849, 1679, 1612, 3938, 2405)
+```
+
+\
+
+Nu wil je graag het gemiddelde berekenen van die 10 inkomens. Dat kan je natuurlijk doen door alle inkomens op te tellen en te delen door 10:
+
+
+```{r}
+(1850 + 1722 + 2319 + 4480 + 1398 + 849 + 1679 + 1612 + 3938 + 2405) / 10
+```
+
+\
+
+Je krijgt wel het juiste antwoord, maar zelfs voor 10 inkomens is het al een hele klus om op deze manier te werken. In echt onderzoek zal je vaak nog veel meer dan 10 observaties maken. Voor 100 of 1000 inkomens zal je veel te veel werk hebben als je de berekening van het gemiddelde op de bovenstaande manier aanpakt. Je zal dus een betere methode nodig hebben.
+
+Hiervoor kan je een functie gebruiken. Een functie kan je zien als een verkorte manier om een gewenst resultaat te krijgen. Bijna elke functie heeft een input nodig. De functie doet iets met die input en geeft je een output terug.
+
+In dit voorbeeld wens je het gemiddelde te berekenen van een reeks gegevens. R weet niet uit zichzelf van welke gegevens jij het gemiddelde wil weten. Jij moet dat aan R vertellen. Hier zijn de gegevens in de vector `inkomen` de input. Je geeft die input aan de functie door die tussen de haakjes te plaatsen, zoals hieronder. De vector `inkomen` is nu een "argument" van de functie `mean()`. De output is het gemiddelde.
+
+```{r}
+mean(inkomen)
+```
+
+\
+
+Op een heel gelijkaardige manier kan je nog allerlei andere zaken te weten komen over de vector `inkomen`. Je geeft telkens de vector als argument aan een bepaalde functie.
+
+De mediaan berekenen:
+
+```{r}
+median(inkomen)
+```
+
+\
+
+De som van alle waarden in de vector:
+
+```{r}
+sum(inkomen)
+```
+
+\
+
+De grootste waarde uit de vector:
+
+```{r}
+max(inkomen)
+```
+
+\
+
+De kleinste waarde uit de vector:
+
+```{r}
+min(inkomen)
+```
+
+\
+
+En het aantal waarden in de vector:
+
+```{r}
+length(inkomen)
+```
+
+\
+
+Je kan met deze functies ook onmiddellijk berekeningen maken. Voer bijvoorbeeld eens de volgende code uit:
+
+```{r}
+sum(inkomen) / length(inkomen)
+```
+
+\
+
+Wat is de output van deze code? Herken je dit getal? Begrijp je wat er is gebeurd?
+
+<details>
+<summary><span class="details-summary">Klik hier om het antwoord te zien</span></summary>
+<div class="meerInfo">
+Dit getal is het gemiddelde dat je eerder al hebt berekend met de functie `mean()`. Het is logisch dat dit dezelfde waarde is, want met sum(inkomen) bereken je de som van alle waarden in de vector. Dat totaal deel je vervolgens door de lengte van de vector, met andere woorden door het aantal observaties. Dit zijn gewoon de stappen in het berekenen van het gemiddelde.
+</div>
+</details>
+
+\
+
+
+## Functies voor dataframes
+
+Functies kunnen ook gebruikt worden om info te halen uit een dataframe in plaats van een vector. Misschien heb je behalve het inkomen ook gevraagd naar hoeveel andere gezinsleden in het gezin leven van de bevraagde personen. Die gegevens zitten in de vector `gezinsleden`.
+
+```{r}
+inkomen <- c(1850, 1722, 2319, 4480, 1398, 849, 1679, 1612, 3938, 2405)
+
+gezinsleden <- c(2, 3, 0, 1, 1, 0, 2, 2, 1, 0)
+```
+
+\
+
+De vectoren `gezinsleden` en `inkomen` kan je samenvoegen tot een dataframe, zoals je eerder al hebt gedaan:
+
+```{r}
+mijn_data <- data.frame(inkomen, gezinsleden)
+```
+
+\
+
+De functie `dim()` vertelt je hoeveel observaties en hoeveel variabelen er in het dataframe zitten. Nu geef je het dataframe als argument aan de functie:
+
+```{r}
+dim(mijn_data)
+```
+
+\
+
+De output die je kreeg, leert je dat er 10 observaties zijn van 2 variabelen. Is dat wat je had verwacht?
+
+Er bestaan nog andere handige functies zoals `dim()` die dienen om overzicht te geven over je data, zonder er berekeningen mee uit te voeren.
+
+Om de eerste 6 observaties uit een dataframe te bekijken kan je de functie `head()` gebruiken.
+
+```{r}
+head(mijn_data)
+```
+
+\
+
+Misschien wil je enkel de eerste 3 rijen van het dataframe zien, in plaats van de eerste 6 rijen. Dat kan je aanpassen in je commando. Je gebruikt dezelfde functie maar geeft er een extra argument aan.
+
+```{r}
+head(mijn_data, n=3)
+
+```
+
+\
+
+Met het argument `n` geef je aan hoeveel rijen van het dataframe je wil zien. Standaard zijn het er 6, maar je kan het dus aanpassen. Als je de argumenten in de juiste volgorde zet, mag je het deel `n=` ook weglaten. Het eerstvolgende stukje code zal dus ook werken, maar het tweede niet:
+
+```{r}
+head(mijn_data, 3)
+```
+
+\
+
+```{r, eval=FALSE}
+head(3, mijn_data)
+```
+
+```{r, echo=FALSE}
+try(head(3, mijn_data))
+```
+
+\
+
+Als je vragen hebt over een functie en/of de argumenten die je eraan kan geven, dan kan je altijd meer informatie krijgen door de functie te laten voorafgaan door een vraagteken. Je ziet dan rechtsonder in RStudio een pagina verschijnen met uitleg. Daarin staat bijvoorbeeld welke argumenten allemaal aan een functie kunnen worden gegeven.
+
+```{r, eval=FALSE}
+?head()
+```
+
+\
+ 
+Een interessante functie om overzicht te krijgen over je data is `str()`. Deze functie geeft je een lijst met alle variabelen die in het dataframe zitten, en meteen zie je erbij om welk type variabele het gaat.
+
+```{r}
+str(mijn_data)
+```
+
+\
+
+Het woordje `num` naast de variabelen `inkomen` en `gezinsleden` geeft aan dat het allebei numerieke variabelen zijn.
+
+\
+
+Leren werken met functies is misschien niet altijd makkelijk in het begin, maar het went snel en het kan zelfs leuk zijn. Onthoud vooral dat functies dienen om je leven makkelijker te maken: minder werk, minder code typen, minder kans op fouten,...
+
+\

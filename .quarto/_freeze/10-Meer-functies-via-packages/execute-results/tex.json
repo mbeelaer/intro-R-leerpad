@@ -1,0 +1,21 @@
+{
+  "hash": "c075f12a63e0cb02bf46dc6d2a2cbdf8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Meer functies via \"packages\"\n\nWanneer je R voor het eerst installeert, dan krijg je een basispakket dat toepasselijk \"base R\" heet. In dat basispakket worden al heel wat functies meegeleverd. Met die functies kan je allerlei taken laten uitvoeren met een minimum aan code.\n\nZo bevat \"base R\" een functie om het gemiddelde te berekenen van een reeks getallen. De vector `sport` bevat het aantal uur dat een groep leerlingen per week aan sport besteedt. De functie `mean()` geeft je heel snel het gemiddelde aantal uur voor die klas.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nsport <- c(6, 0, 7, 8, 3, 0, 3, 3, 7, 2, 6, 5, 3, 4, 7, 3, 7, 3, 6, 0)\n\nmean(sport)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 4.15\n```\n\n\n:::\n:::\n\n\n\n\\\n\nEén van de mooie aspecten van R is dat iedereen nieuwe functies kan maken en die beschikbaar kan stellen voor alle gebruikers wereldwijd. Die extra functies worden gebundeld in zogenaamde packages. Op die manier zijn er duizenden uitbreidingen ontstaan van het basispakket van R. Zo heeft iemand allerlei functies gemaakt die helpen bij het visueel voorstellen van data. Die functies zijn gebundeld in een package genaamd `ggplot2`.\n\n\\\n\nAls je functies uit packages wil gebruiken, moet je die eerst installeren en vervolgens laden.\n\n<ol>\n<li> Eerst het installeren. Dat is ongelooflijk eenvoudig. Voor bijvoorbeeld het package `lavaan`, typ je gewoon de onderstaande code in R.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"lavaan\")\n```\n:::\n\n\n\n\\\n\nHet package wordt nu automatisch gedownload en geïnstalleerd. Let erop dat je de naam van het package tussen aanhalingstekens plaatst. Het installeren van een package hoef je maar één keer te doen. \n\n\\\n\n<li> Om de functies uit het package te gebruiken in je code, moet je het laden met de functie `library()`. Hierbij is het goed mogelijk dat er één of meer 'warnings' verschijnen in de console. Dat is meestal geen enkel probleem. Een 'warning' geeft gewoon informatie die je als gebruiker misschien zal interesseren. Het betekent niet meteen dat er iets fout is gegaan. Dat is anders dan een 'error'. Als je dat ziet staan is er wel een probleem en zal het package niet naar behoren werken.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(lavaan)\n```\n:::\n\n\n\n\\\n\nHet laden van een package moet je wél elke keer doen dat je RStudio start (in tegenstelling tot het installeren). Daarom is het een goed idee om een script altijd te starten met het laden van de packages die je van plan bent te gebruiken. Wil je bijvoorbeeld de packages `lavaan` en `ggplot2` gebruiken, plaats dan bovenaan in je script de code:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(lavaan)\nlibrary(ggplot2)\n```\n:::\n\n\n\n\\\n\nVoer deze twee regels code uit elke keer dat je het script opent. Zo beschik je meteen over alle functies uit die packages.\n\n</ol>\n\n\\\n\n<div class=\"banner center\">\n<p style=\"font-size:24px; font-weight:bold\">Twee functies om te onthouden</p>\n\\\nOm nieuwe packages te kunnen gebruiken moet je maar twee functies onthouden:\n\n`install.packages()` moet je éénmalig uitvoeren.\n\n`library()` moet je uitvoeren elke keer wanneer je de functies uit een package wil gebruiken.\n</div>\n\n\\\n\n",
+    "supporting": [
+      "10-Meer-functies-via-packages_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

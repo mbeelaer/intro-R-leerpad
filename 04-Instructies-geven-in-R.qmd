@@ -1,0 +1,80 @@
+# Instructies geven in R
+
+Tip: Het is een goed idee om zelf RStudio te openen en zoveel mogelijk actief mee te doen!
+
+\
+
+In dit hoofdstuk leer je hoe RStudio eruit ziet en krijg je een idee van wat je ermee kan doen. Het belangrijkste is dat je voor het eerst zal zien hoe je instructies (ook wel "commando's" genoemd) kan geven.
+
+R is een programmeertaal. Dat betekent dat je commando's zal typen "ergens" in RStudio. Waar ergens?
+
+Als je RStudio voor het eerst opent, ziet het er ongeveer uit zoals op de afbeelding hieronder. Er zijn enkele deelvensters.
+
+\
+
+<img src="Afbeelding 4.1.png" alt="startscherm R">
+
+\
+
+Aan de linkerkant (in het lichtblauw hieronder) zie je de console. Dit is het hart van R. Het is de plaats waar jouw commando's geïnterpreteerd worden en waar je het "antwoord" van R of de "output" zal kunnen zien.
+
+\
+
+<img src="Afbeelding 4.2.png" alt="console">
+
+\
+
+Het is mogelijk om commando's te typen in de console. Typ bijvoorbeeld de berekening 5+3 in de console en druk op <kbd>Enter</kbd>.
+
+\
+
+<img src="Afbeelding 4.3.png" alt="eerste berekening 5+3">
+
+\
+
+Je ziet dat het commando inderdaad wordt uitgevoerd: je krijgt output terug van R. Dit werkt wel, maar regel per regel commando's typen in de console is echt niet handig. Dat zal je heel snel merken wanneer je iets complexere code moet schrijven.
+
+Een veel beter alternatief is werken met scripts. Een script open je door te klikken op het witgroene icoontje linksboven (zie hieronder) en vervolgens op "R Script" te klikken. Je kan het ook helemaal bovenaan via het menu File > New File > R Script.
+
+\
+
+<img src="Afbeelding 4.4.png" alt="script openen">
+
+\
+
+Er opent een nieuw deelvenster en de console wordt wat kleiner.
+
+\
+
+<img src="Afbeelding 4.5.png" alt="script en console">
+
+\
+
+Zo'n script is een eenvoudig tekstbestand dat in RStudio wordt geopend. Code die je in het script plaatst, kan je nu makkelijk laten uitvoeren door de console. Dit wordt gedemonstreerd in het filmpje. Uitleg in tekstvorm vind je onder het filmpje.
+
+\
+
+<iframe src="https://ugent.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=8cbc5acc-6f76-413d-a1c3-b1a0009054c9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="315" width="560" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto ingesloten videospeler" aria-description="Video code in script uitvoeren" ></iframe>
+
+\
+
+Om één regel code uit te voeren klik je met je muis in de regel code die je wil uitvoeren. Druk nu tegelijk op de knoppen <kbd>CTRL</kbd> en <kbd>Enter</kbd> op je toetsenbord (voor Mac: <kbd>Command</kbd> en <kbd>Enter</kbd>). Op deze manier wordt één regel van je code uitgevoerd.
+
+Wil je meerdere regels code in één keer uitvoeren, selecteer dan alle gewenste regels door te slepen met je muis en klik vervolgens op <kbd>CTRL</kbd> en <kbd>Enter</kbd> (voor Mac: <kbd>Command</kbd> en <kbd>Enter</kbd>).
+
+\
+
+Voila! 
+
+Wat is nu eigenlijk het voordeel van te werken met een script? De code zelf verdwijnt niet van zodra je ze uitvoert in de console. Daardoor kan je die bv. verschillende keren na elkaar uitvoeren en aanpassen. Het voordeel van zulke scripts is nu misschien nog niet 100% duidelijk, maar geloof me, het is véél handiger dan code rechtstreeks in de console te typen, zeker wanneer de code wat langer en ingewikkelder is.
+
+\
+
+<div class="banner center">
+<p style="font-size:24px; font-weight:bold">Proficiat!</p>
+\
+Je kan nu commando's ingeven in R. De wereld ligt aan je voeten!</div>
+
+\
+
+\

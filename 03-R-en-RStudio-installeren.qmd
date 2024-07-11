@@ -1,0 +1,168 @@
+# R en RStudio installeren
+
+Om alle mogelijkheden van R te kunnen gebruiken moet je natuurlijk eerst enkele zaken installeren op je eigen computer. Hoe je dat kan doen zullen we in deze module stap voor stap tonen. Je zal zien dat het niet zo moeilijk is. Je computer doet heel veel werk automatisch.
+
+Je zal eerst R moeten installeren. Daarna volgt de installatie van RStudio.
+
+Het proces van installeren is lichtjes verschillend voor Windows en voor macOS (Apple). Klik op het pijltje naar rechts tot je op de juiste pagina terechtkomt of klik in de inhoudstafel aan de linkerkant. 
+
+\
+
+
+## Windows
+
+### R installeren voor Windows 
+
+In het filmpje hieronder wordt voorgetoond hoe je R kan downloaden en installeren voor Windows. De verschillende stappen die je moet doorlopen zijn:
+
+<ul>
+<li> Surf naar de website <a href="https://www.r-project.org" target="_blank">www.r-project.org</a>
+
+<li> Klik door naar de pagina "Download"
+
+<li> Kies een mirror, bij voorkeur uit België (tenzij je je in een ander land bevindt)
+
+<li> Klik op de link "Download R for Windows"
+
+<li> Klik op "base"
+
+<li> Klik op de link "Download R 4.0.3 for Windows". De cijfers kunnen verschillend zijn, afhankelijk van wat de laatste nieuwe versie is. 
+
+</ul>
+
+\
+
+<iframe src="https://ugent.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=20a1e447-e6e7-4c8a-821b-b1a00090a7c7&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="315" width="560" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto ingesloten videospeler" aria-description="Video R installeren" ></iframe>
+
+\
+
+R is nu een programma op je computer dat je kan openen. Op de afbeelding hieronder zie je hoe dat eruit ziet: héél basic en ouderwets. Het lijkt niets meer dan een paar regeltjes tekst onder elkaar waar je ook zelf wat in kan typen. In principe zou je hiermee aan de slag kunnen gaan, maar dit is toch vooral iets voor de liefhebbers van extreme soberheid.
+
+\
+
+<img src="Afbeelding 3.1.jpg" alt="R interface">
+
+\
+
+R is niet ontworpen als een gebruiksvriendelijk "product". Om het werken met R aangenamer én efficiënter te maken, zal je RStudio gebruiken. Zo meteen kom je te weten hoe je RStudio kan downloaden en installeren. 
+
+\
+
+\
+
+### RStudio installeren voor Windows 
+
+R kan je zien als een motor met wielen eronder. Het is genoeg om je van punt A naar punt B te brengen. Maar met een motor alleen ben je niet zo veel. Je hebt ook de rest van de auto nodig om comfortabel te kunnen reizen. Dat is ongeveer wat RStudio doet: het maakt werken met R vlot, comfortabel en gebruiksvriendelijk.
+
+In het filmpje verderop zie je hoe je het programma "RStudio" kan downloaden. De stappen die je moet doorlopen zijn:
+
+<ul>
+<li> Zoek via Google naar "download RStudio".
+
+<li> Het eerste zoekresultaat, van de website rstudio.com, is meteen de juiste link.
+
+<li> Kies voor de gratis versie en klik op "Download".
+
+<li> Op deze pagina zie je opnieuw een downloadknop. Daarmee start je het installatieproces.
+
+<li> Je zal enkele keren op "Ok" en "Volgende" moeten klikken en ten slotte op "Voltooien".
+</ul>
+
+\
+
+<iframe src="https://ugent.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4a1f133b-0883-4ee4-884a-b1a0009096e4&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="315" width="560" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto ingesloten videospeler" aria-description="Video final RStudio installeren" ></iframe>
+
+\
+
+\
+
+## macOS
+
+### R installeren voor macOS 
+
+In de video hieronder tot minuut 2:09 kan je zien hoe het installeren van R verloopt op een computer met het besturingssysteem macOS. Alle laptops en vaste PC's van het merk Apple gebruiken dit besturingssysteem.
+
+De stappen die je zal moeten doorlopen zijn:
+
+<ul>
+<li> Surf naar de website <a href="https://www.r-project.org/" target="_blank">www.r-project.org</a>
+
+<li> Klik door naar de pagina "Download"
+
+<li> Kies een mirror, bij voorkeur uit België (tenzij je je in een ander land bevindt)
+
+<li> Klik op de link "Download R for (Mac) OS X"
+
+<li> Klik op de link die eindigt op ".pkg" en sla het bestand op \ <img src="Afbeelding 3.2.png" alt=".pkg">
+
+<li> Open het bestand dat je net hebt opgeslagen en doorloop het installatieproces.
+</ul>
+
+\
+
+<iframe src="https://www.youtube.com/embed/by5HyJX6H1I?start=0&amp;end=129&amp;wmode=opaque&amp;rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+
+\
+
+In de video vanaf minuut 1:54 zag je al heel kort hoe R eruit ziet: héél erg basic en ouderwets. Het lijkt niets meer dan een paar regeltjes tekst onder elkaar waar je ook zelf wat in kan typen. In principe zou je hiermee aan de slag kunnen gaan, maar dit is toch vooral iets voor de liefhebbers van extreme soberheid.
+
+R is niet ontworpen als een gebruiksvriendelijk "product". Om de ervaring van het werken met R aangenamer én efficiënter te maken, zal je RStudio gebruiken. Zo meteen leer je hoe je RStudio kan downloaden en installeren.
+
+\
+
+### RStudio installeren voor macOS 
+
+In de video hieronder (van minuut 2:09 tot 3:53) zie je hoe de installatie van RStudio verloopt op een computer met het besturingssysteem macOS. De verschillende stappen die je moet doorlopen zijn:
+
+<ul>
+<li> Zoek de woorden "download RStudio" via Google
+
+<li> De eerste link in de lijst zou meteen de juiste moeten zijn. Deze link brengt je naar de website rstudio.com
+
+<li> Scroll een beetje naar beneden en kies RStudio Desktop Free. Klik op de blauwe downloadknop.
+
+<li> Klik op de downloadknop met de tekst "Download RStudio for Mac".
+
+<li> Open het bestand dat je net hebt gedownload en doorloop het installatieproces op je computer.
+</ul>
+
+\
+
+<iframe src="https://www.youtube.com/embed/by5HyJX6H1I?start=129&amp;end=233&amp;wmode=opaque&amp;rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+
+
+\
+
+----------------
+
+<div class="banner">
+<p style="font-size:24px; font-weight:bold">Klaar voor gebruik!</p>
+\
+Mooi zo! RStudio is nu een programma op je computer dat je kan openen, net zoals alle andere programma's, zoals Word of Powerpoint. Telkens als je met R wil werken zal je nu RStudio openen.</div>
+
+
+\
+
+## Versies van R
+
+R is software die voortdurend evolueert. Regelmatig wordt een nieuwe versie uitgebracht. Soms zijn er belangrijke verschillen tussen de versies, waardoor het belangrijk is om te weten in welke versie je aan het werken bent.
+
+Je kan aflezen welke versie van R je gebruikt bij het opstarten van RStudio. In de console zie je een versienummer. In de afbeelding hieronder is het versie 4.0.4.
+
+\
+
+<img src="Afbeelding 3.3.png" alt="versie1">
+
+\
+
+Je kan de versie ook te weten komen door het commando `version` uit te voeren. Bijna helemaal onderaan vind je vervolgens de huidige versie.
+
+\
+
+<img src="Afbeelding 3.4.png" alt="versie2">
+
+\
+
+Is je versie van R verouderd? Je kan altijd de nieuwe versie downloaden van de website (<a href="https://www.r-project.org/" target="_blank">www.r-project.org</a>). De installatie gebeurt net zoals beschreven staat eerder in deze module. De oude versie die je voordien had zal gewoon worden vervangen.
+
+\

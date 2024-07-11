@@ -1,0 +1,31 @@
+project:
+  type: book
+
+book:
+  title: "Introductie R"
+  author: "Michiel Beelaerts"
+  date: "4-7-2024"
+  chapters:
+    - index.qmd
+    - 02-Wat-is-R.qmd
+    - 03-R-en-RStudio-installeren.qmd
+    - 04-Instructies-geven-in-R.qmd
+    - 05-Data-in-R.qmd
+    - 06-Eerste-berekeningen-in-R.qmd
+    - 07-Eenvoudige-functies.qmd
+    - 08-Je-werk-opslaan.qmd
+    - 09-Data-importeren.qmd
+    - 10-Meer-functies-via-packages.qmd
+    
+bibliography: references.bib
+
+format:
+  html:
+    theme: default
+    css: statlas-introR-quarto.css
+    toc-title: Op deze pagina
+  pdf:
+    documentclass: scrreprt
+
+editor: source
+

@@ -1,0 +1,232 @@
+# Eerste berekeningen in R
+
+Misschien herinner je je nog dat in het begin van dit leerpad werd gezegd dat R dient om allerlei berekeningen te maken. Eindelijk zijn we zover om dit voor het eerst te demonstreren!
+
+\
+
+## Bewerkingen met getallen
+
+R kan je onder meer gebruiken voor eenvoudige wiskundige bewerkingen. Bekijk de video voor een demonstratie. Onder de video vind je de bijhorende uitleg in tekstvorm.
+
+\
+
+<iframe src="https://ugent.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=c0253b4a-b42d-4ab4-9295-b1a0009032f8&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="315" width="560" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto ingesloten videospeler" aria-description="Video wiskundige basisbewerkingen" ></iframe>
+
+\
+
+R is een programmeertaal. Dat betekent dat het een taal is waarmee je instructies geeft aan je computer.
+
+Niet alle instructies geven het gewenste resultaat. R kan geen boterhammen voor je smeren of je kot opkuisen, dus het heeft weinig zin om dat te vragen aan R.
+
+Wat kan je dan wel met R? R is een hulpmiddel dat je helpt om onderzoeksvragen te beantwoorden. En dus bevat R allerlei mogelijkheden (echt serieus, héél veel mogelijkheden!) om berekeningen te maken die daarbij helpen.
+
+Een aantal van de commando's om zulke berekeningen te maken zal je leren kennen in de loop van je vakken. Voor deze introductie beginnen we bij het begin: eenvoudige wiskundige bewerkingen als optellen en aftrekken, vermenigvuldigen en delen. Er wordt soms gezegd dat R een veredelde rekenmachine is. En inderdaad, je kan R gebruiken als een gewone rekenmachine.
+
+Tip: probeer de commando's die je op deze pagina tegenkomt ook zelf eens uit in RStudio. Dat is belangrijk om het allemaal wat in de vingers te krijgen.
+
+\
+
+### Getallen
+
+Je kan getallen optellen.
+
+```{r}
+4+3
+```
+
+\
+
+Het maakt voor R trouwens niet uit of je spaties tussen de tekens zet. Om de leesbaarheid van je code te verbeteren is het wel een goed idee om regelmatig spaties te gebruiken.
+
+```{r}
+4 + 3 
+```
+
+\
+
+```{r}
+4           +             3
+```
+
+\
+
+
+Je kan een getal van een ander getal aftrekken.
+
+```{r}
+5-2
+```
+
+\
+ 
+
+Twee getallen vermenigvuldigen kan ook. Je gebruikt daarvoor een asterisk `*`.
+
+```{r}
+6*3
+```
+
+\
+
+Je voelt het al komen: je kan ook een getal delen door een ander getal. Merk op dat de output "1 komma 5" geschreven wordt met een punt, dus niet "1,5". Ook als je zelf commando's schrijft, moet je een punt gebruiken om kommagetallen te typen.
+
+```{r}
+12/8
+```
+\
+
+En ook getallen tot een macht verheffen kan natuurlijk. 2 tot de 5e macht verheffen doe je zo:
+
+```{r}
+2^5
+```
+\
+
+Deze bewerkingen kan je combineren, eventueel ook met haakjes erbij. De gebruikelijke volgorde van bewerkingen is hier van toepassing.
+
+```{r}
+10 / 6 - 7
+```
+
+\
+
+```{r}
+10 / (6 - 7)
+```
+
+\
+
+```{r}
+(11 - 4) * 4 / 2 + (1 / 3)
+```
+
+\
+
+### Objecten
+
+Al onder de indruk van de kracht van R? Waarschijnlijk niet. Dat was natuurlijk nog heel basic. Wat kan er verder nog? Het is ook mogelijk om te rekenen met objecten die getallen bevatten, bijvoorbeeld zo:
+
+```{r}
+getal1 <- 8
+getal2 <- 10
+```
+\
+
+Het object `getal1` bevat de waarde 8 terwijl object `getal2` de waarde 10 bevat. Net als voorheen kan je wiskundige bewerkingen uitvoeren, maar nu door de objectnamen te gebruiken in plaats van de getallen zelf.
+
+```{r}
+getal1 + getal2
+
+```
+
+\
+
+```{r}
+(getal2 / getal1) - getal1
+```
+
+\
+
+```{r}
+20 - getal1
+```
+
+\
+
+<div class="banner center">
+<p style="font-size:24px; font-weight:bold">That's it?</p>
+
+Allemaal goed en wel, maar tot hier toe heb je nog geen duidelijk antwoord op de vraag waarom R handiger is dan een gewone rekenmachine. Zo meteen zal dat duidelijker beginnen worden.
+
+</div>
+
+\
+
+
+## Bewerkingen met vectoren
+
+Bekijk het filmpje om te zien hoe je wiskundige bewerkingen kan uitvoeren met vectoren in R. Onder de video vind je de bijhorende uitleg in tekstvorm.
+
+\
+
+<iframe src="https://ugent.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=c06f9769-a59e-4c1e-aff5-b1a00090332b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="315" width="560" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto ingesloten videospeler" aria-description="Video bewerkingen met vectoren" ></iframe>
+
+\
+
+In R kan je rekenen met ganse vectoren. Nu zal je pas voor het eerst beginnen merken hoe handig R eigenlijk is.
+
+\
+
+### Voorbeeld 1
+
+Bijvoorbeeld, je wil de evolutie van het gewicht van baby's onderzoeken.
+
+Je weegt baby's bij de geboorte. Die gegevens (in kilogram) sla je op in een vector:
+
+```{r}
+gewicht_geboorte <- c(3.411, 2.965, 3.215, 3.009, 3.228)
+```
+
+\
+ 
+Vervolgens meet je dezelfde baby's opnieuw, 6 maanden na de geboorte. Ook deze gegevens sla je – in dezelfde volgorde! – op in een vector.
+
+```{r}
+gewicht_6mnd <- c(5.033, 5.011, 5.501, 5.120, 4.963)
+```
+
+\
+
+Een logische vraag zou nu kunnen zijn hoeveel elke baby is bijgekomen 6 maanden na de geboorte. Je zou natuurlijk telkens de waarden voor het gewicht van de individuele baby's kunnen aftrekken:
+
+$`r gewicht_6mnd[1]` - `r gewicht_geboorte[1]`$ voor de eerste baby,
+
+$`r gewicht_6mnd[2]` - `r gewicht_geboorte[2]`$ voor de tweede baby, 
+
+enzovoort voor de andere baby's.
+
+Dat is natuurlijk heel tijdrovend en je loopt bovendien het risico dat je fouten maakt. Voor een vijftal baby's valt het nog mee, maar in echt onderzoek zal je vaak veel meer dan 5 metingen uitvoeren.
+
+In R hoef je gelukkig niet zoveel werk te doen. In plaats daarvan kan je eenvoudigweg de twee vectoren van elkaar aftrekken. Dit verschil steek je in een nieuw object, bijvoorbeeld met de naam `gewicht_evolutie`.
+
+```{r}
+gewicht_evolutie <- gewicht_6mnd - gewicht_geboorte
+```
+
+\
+ 
+Wanneer je dit nieuwe object oproept, zie je een vector die het verschil in gewicht bevat van elke baby tussen de geboorte en 6 maanden na de geboorte. Veel eenvoudiger, niet?
+
+```{r}
+gewicht_evolutie
+```
+
+\
+
+R is dan wel een "soort rekenmachine", dit voorbeeld demonstreert voor het eerst dat R toch een pak meer kan dan de doorsnee rekenmachine op je smartphone.
+
+
+### Voorbeeld 2
+
+Laten we nog een tweede voorbeeld bekijken van een berekening met vectoren: Je kan een vector vermenigvuldigen met een getal. Dit kan bijvoorbeeld handig zijn om de gegevens te veranderen van eenheid. Bijvoorbeeld, je beschikt over gegevens in meter, maar je wil die liever in centimeter.
+
+```{r}
+data_meter <- c(1.55, 1.79, 1.99, 1.91, 1.65, 1.81, 1.49, 1.74, 1.79)
+```
+
+\
+
+```{r}
+data_centimeter <- 100 * data_meter
+
+data_centimeter
+```
+
+\
+
+Natuurlijk kan je ook vectoren optellen, vermenigvuldigen, delen,...
+
+\
+
+
+\
